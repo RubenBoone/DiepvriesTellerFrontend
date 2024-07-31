@@ -9,6 +9,9 @@ function App() {
       <div className="container">
         <ProgramList/>
       </div>
+      <footer>
+        <p>Created by <a target='_blank' href='https://rubenboone.netlify.app/'>Ruben</a></p>
+      </footer>
     </div>
   );
 }
