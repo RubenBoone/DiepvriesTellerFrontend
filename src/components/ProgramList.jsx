@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Program from "./Program";
 import ProgramCreator from "./ProgramCreator";
 import API from "../api/Api";
+import spinner from "../loading.png";
 
 class ProgramList extends Component
 {
@@ -96,13 +97,15 @@ class ProgramList extends Component
     {
         return <div>
                 <ProgramCreator post={this.postProgram}/>
-                {this.state.loading ? (
-                <div style={{ textAlign: 'center', marginTop: '1rem' }}>
-                    Loading...
+                <div className="programlist">
+                    {this.state.loading ? (
+                    <div style={{ textAlign: 'center', maxWidthwidth: "40%", margin: "auto",  marginTop: '2rem' }}>
+                        <img src={spinner} alt="loading..." />
+                    </div>
+                    ) : (
+                        this.createProgramList()
+                    )}
                 </div>
-                ) : (
-                    this.createProgramList()
-                )}
             </div>
     }
 }
