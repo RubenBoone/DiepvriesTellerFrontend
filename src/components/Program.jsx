@@ -77,14 +77,18 @@ class Program extends Component
             oldProducts.push(response.data);
             this.setState({
                 products: oldProducts,
-                inputMode: !this.state.inputMode
             });
         });
+
+        this.setState({
+            name: "",
+            amount: "",
+            amountPerBox: ""
+        })
     }
 
     createProductList()
     {
-        console.log(this.state.products);
         return this.state.products.map((product) => {
             return <Product name={product.name} amount={product.amount} 
                 amountPerBox={product.amountPerBox} key={product._id} id={product._id}/>
@@ -100,13 +104,16 @@ class Program extends Component
             items.push(
             <p className="item" key={-1}>
                 <input type="text" placeholder="choco broodje"
-                     onChange={(event) => this.onNameChange(event)}/>
-                <input type="number" placeholder="6"
-                    onChange={(event) => this.onAmountChange(event)}/>
-                <input type="number" placeholder="2"
+                     onChange={(event) => this.onNameChange(event)}
+                     value={this.state.name}/>
+                <input type="number" placeholder="43"
+                    onChange={(event) => this.onAmountChange(event)}
+                    value={this.state.amount}/>
+                <input type="number" placeholder="12"
                     onChange={(event) => this.onBoxAmountChange(event)}/>
                 <button type="button" className="add"
-                    onClick={(event) => this.createProduct()}>
+                    onClick={(event) => this.createProduct()}
+                    value={this.state.amountPerBox}>
                     <i className="fa-solid fa-save"></i>
                 </button>
             </p>)
