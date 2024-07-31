@@ -1,38 +1,159 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+}
+
+h1 {
   text-align: center;
+  background-color: #EEB717;
+  padding: 2rem;
+  border-bottom: 3px solid black;
+  margin-bottom: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 80%;
+  margin: auto;
+  margin-bottom: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.program {
+  border: 3px solid black;
+  margin-top: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.control button {
+  padding: 0.5rem;
+}
+
+.control i {
+  margin: 0 !important;
+} 
+
+.control div {
   display: flex;
   flex-direction: column;
+  flex-grow: 0.95;
+}
+
+.control button {
+  max-width: 10%;
+  min-width: 10%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.control input {
+  padding: 0.2rem
+}
+
+.program h2 {
+  margin: 1rem;
+}
+
+.program .heading {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.heading * {
+  margin: 0.2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.heading div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.product {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.2rem;
+  padding-left: 0.5rem;
+}
+
+.productInfo {
+  max-width: 52%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product input[type="number"] {
+  max-width: 2rem;
+  padding: 0.2rem;
+  margin-right: 0.2rem;
+}
+
+.product .add, .box, .delete {
+  padding: 0.1rem !important;
+  margin: 0.2rem !important;
+}
+
+.product i {
+  margin: 0.1rem !important;
+}
+
+.box {
+  background-color: #dbb13e;
+  border: 2px solid #ab8b31;
+  border-radius: 5px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.item * {
+  text-align: center;
+  height: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.item i {
+  margin: 0;
+}
+
+.item input[type="number"] {
+  max-width: 2rem;
+}
+
+.item button {
+  padding: 0.1rem;
+}
+
+.add {
+  background-color: #1fcd33;
+  border: 2px solid #127d10;
+  padding: 0.2rem;
+  border-radius: 5px;
+}
+
+.delete {
+  background-color: #cd1f1f;
+  border: 2px solid #7d1010;
+  padding: 0.2rem;
+  border-radius: 5px;
+}
+
+i {
+  margin: 0.5rem !important;
 }
