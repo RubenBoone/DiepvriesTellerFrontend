@@ -9,17 +9,21 @@ class ProgramList extends Component
     {
         super();
         this.state = {
-            programs: []
+            programs: [],
+            loading: false
         };
     }
 
     componentDidMount()
     {
+        this.setState({loading: true});
+
         let promise = API.getAllPrograms();
 
         promise.then((response) => {
             this.setState({
-                programs: response.data
+                programs: response.data,
+                loading: false
             });
         });
 
@@ -92,7 +96,13 @@ class ProgramList extends Component
     {
         return <div>
                 <ProgramCreator post={this.postProgram}/>
-                {this.createProgramList()}
+                {this.state.loading ? (
+                <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+                    Loading...
+                </div>
+                ) : (
+                    this.createProgramList()
+                )}
             </div>
     }
 }
