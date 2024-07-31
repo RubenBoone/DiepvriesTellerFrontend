@@ -10,7 +10,7 @@ function App() {
         <ProgramList/>
       </div>
       <footer>
-        <p>Created by <a target='_blank' href='https://rubenboone.netlify.app/'>Ruben</a></p>
+        <p>Created by <a target='_blank' rel="noreferrer" href='https://rubenboone.netlify.app/'>Ruben</a></p>
       </footer>
     </div>
   );
