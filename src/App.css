@@ -46,6 +46,7 @@ img {
   border: 3px solid black;
   margin-top: 2rem;
   margin: 1rem;
+  margin-left: 0;
   min-width: 45%;  
 }
 
