@@ -1,6 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import API from './api/Api';
 import ProgramList from './components/ProgramList';
 
 function App() {

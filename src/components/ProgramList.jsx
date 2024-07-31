@@ -64,7 +64,7 @@ class ProgramList extends Component
             let promise = API.deleteProgram(id);
 
             promise.then((response) => {
-                if (response.status == 200) {
+                if (response.status === 200) {
                     const oldProgramsList = this.state.programs;
                     this.setState({
                         programs: this.deleteObjectbyId(oldProgramsList, id)
@@ -77,7 +77,7 @@ class ProgramList extends Component
     createProgramList()
     {
 
-        if (this.state.programs.length == 0) {
+        if (this.state.programs.length === 0) {
             return <div style={{marginTop: 1 + "rem", textAlign: "center"}}>Er zijn geen programmas gevonden...</div>;
         }
 
