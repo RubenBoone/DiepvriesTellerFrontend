@@ -1,7 +1,7 @@
 import axios from 'axios';
 require('dotenv').config();
 
-const url = process.env.API_LINK;
+const url = "https://diepvriestellerbackend.onrender.com"
 
 class API
 {
