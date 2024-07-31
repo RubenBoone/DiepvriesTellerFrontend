@@ -1,6 +1,7 @@
-import axios from 'axios'
+import axios from 'axios';
+require('dotenv').config();
 
-const url = "http://192.168.1.63:5000"
+const url = process.env.API_LINK;
 
 class API
 {
