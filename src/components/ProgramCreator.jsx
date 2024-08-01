@@ -8,7 +8,7 @@ class ProgramCreator extends Component
         super(props);
         this.state = {
             name: "",
-            backingProgram: 0
+            backingProgram: ""
         }
     }
 
