@@ -110,10 +110,10 @@ class Program extends Component
                     onChange={(event) => this.onAmountChange(event)}
                     value={this.state.amount}/>
                 <input type="number" placeholder="12"
-                    onChange={(event) => this.onBoxAmountChange(event)}/>
+                    onChange={(event) => this.onBoxAmountChange(event)}
+                    value={this.state.amountPerBox}/>
                 <button type="button" className="add"
-                    onClick={(event) => this.createProduct()}
-                    value={this.state.amountPerBox}>
+                    onClick={(event) => this.createProduct()}>
                     <i className="fa-solid fa-save"></i>
                 </button>
             </p>)
